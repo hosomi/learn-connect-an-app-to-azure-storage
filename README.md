@@ -84,3 +84,34 @@ dotnet add package Azure.Storage.Blobs
 パッケージの使い方等は公式の Microsoft Docs を参照してください。  
 https://docs.microsoft.com/ja-jp/azure/storage/blobs/storage-quickstart-blobs-dotnet  
 
+
+* ソリューションファイルに言語（C#） のバージョンを指定について
+
+説明では次のように TargetFramework に C# 7.1 を指定していますが、.NET Core 3.1 の場合、この作業は不要です。  
+（説明のプロジェクトでは .NET Core 2.2 系の為、言語バージョンの指定が必要となっています。）  
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <LangVersion>7.1</LangVersion>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+  ...
+</Project>
+```
+
+VisualStudio 2019 で .NET Core（コンソールアプリ）を作成した場合はデフォルトで .NET Core 3.1 が選択されます。  
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+...
+```
+
+
+
