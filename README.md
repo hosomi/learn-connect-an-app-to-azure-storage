@@ -71,12 +71,8 @@ az storage account show-connection-string `
 * 利用する nuget パッケージが非推奨になっていますので置き換えてください。  
 
 :x: ``dotnet add package WindowsAzure.Storage``:  
-![WindowsAzure.Storage](learn-queue-app-01.png)  
-
 
 ↓    
-
-* [NuGet Gallery | Microsoft.Azure.Storage.Queue 11.2.0](https://www.nuget.org/packages/Microsoft.Azure.Storage.Queue/11.2.0?_src=template)
 
 :heavy_check_mark: ``dotnet add package Azure.Storage.Blobs``:  
 （必要に応じて引数にバージョンを付与してください。）  
